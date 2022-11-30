@@ -1,0 +1,22 @@
+{% load bootstrap4 %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{% block title %}Главная{% endblock %} - Система климата</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'main/style.css' %}">
+</head>
+<body>
+<div class="content">
+    <div class="header">Система управления<br>микроклиматом</div>
+    <div class="center-me">
+        {% bootstrap_messages %}
+        {% block content %}
+        {% endblock %}
+    </div>
+</div>
+<script src="{% static 'main/script.js' %}"></script>
+</body>
+</html>

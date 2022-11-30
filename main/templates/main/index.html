@@ -1,0 +1,56 @@
+{% extends "layout/basic.html" %}
+
+{% load static %}
+
+{% block title %}Система управления микроклиматом{% endblock %}
+
+{% block content %}
+
+<div class="row">
+    <div class="element element--output">
+        <h2><img src="{% static 'main/img/lighting.png' %}" alt="Интенсивность света">Интенсивность света</h2>
+        <div data-type="output" id="intensity" class="font-size">0</div>
+    </div>
+    <div class="element element--output">
+        <h2><img src="{% static 'main/img/temperature.png' %}" alt="Температура">Температура</h2>
+        <div data-type="output" id="temperature" class="font-size">0</div>
+    </div>
+    <div class="element element--output">
+        <h2><img src="{% static 'main/img/pressure.png' %}" alt="Давление">Давление</h2>
+        <div data-type="output" id="pressure" class="font-size">0</div>
+    </div>
+    <div class="element element--output">
+        <h2><img src="{% static 'main/img/humidity.png' %}" alt="Влажность">Влажность</h2>
+        <div data-type="output" id="humidity" class="font-size">0</div>
+    </div>
+</div>
+<div class="row">
+    <div class="element element--toggle">
+        <section class="slide">
+            <p class="text">питание (система)</p>
+            <div class="slideThree">
+                <input type="checkbox" value="None" id="slideThree1" name="check" checked/>
+                <label for="slideThree1"></label>
+            </div>
+        </section>
+    </div>
+    <div class="element element--toggle">
+        <section class="slide">
+            <p class="text">освещение</p>
+            <div class="slideThree">
+                <input type="checkbox" value="None" id="slideThree2" name="check" checked/>
+                <label for="slideThree2"></label>
+            </div>
+        </section>
+    </div>
+    <div class="element element--toggle">
+        <section title=".slideThree3" class="slide">
+            <p class="text">насосы</p>
+            <div class="slideThree">
+                <input type="checkbox" value="None" id="slideThree3" name="check" checked/>
+                <label for="slideThree3"></label>
+            </div>
+        </section>
+    </div>
+</div>
+{% endblock %}
